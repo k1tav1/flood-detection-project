@@ -1,24 +1,49 @@
-function About() {
-    return (
-      <div className="min-h-screen bg-gray-100">
-        <main className="max-w-5xl mx-auto p-6">
-          <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">About Flood Detection</h1>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-gray-700 text-lg mb-4">
-              The Flood Detection Dashboard is a real-time system designed to monitor flood-related posts on X,
-              helping communities stay informed about flood risks in Kenya.
-            </p>
-            <p className="text-gray-700 text-lg mb-4">
-              Built by Kitavi, a 3rd-year student, this project uses React, Tailwind CSS, and Leaflet to
-              visualize flood data and provide actionable insights.
-            </p>
-            <p className="text-gray-700 text-lg">
-              Future plans include integrating AI (NLP) to classify posts and deploying the app for public use.
+import Sidebar from '../components/Sidebar';
+
+const About = () => {
+  return (
+    <div className="flex min-h-screen bg-gray-900 text-white font-roboto">
+      <Sidebar />
+      <main className="flex-1 p-6 md:ml-64">
+        <div className="bg-gray-800 p-4 rounded-lg shadow-md space-y-6">
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
+            <p>
+              Beacon is revolutionizing disaster response through real-time social media analysis and machine learning. Our platform provides crucial early warnings and facilitates rapid emergency response, helping communities stay safe and informed during critical situations.
             </p>
           </div>
-        </main>
-      </div>
-    );
-  }
-  
-  export default About;
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-700 p-4 rounded-lg">
+                <h3 className="font-semibold">Real-time Monitoring</h3>
+                <p>Continuous analysis of social media data to detect emerging disasters</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg">
+                <h3 className="font-semibold">ML-Powered Analysis</h3>
+                <p>Advanced algorithms for accurate disaster detection and classification</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg">
+                <h3 className="font-semibold">Instant Alerts</h3>
+                <p>Immediate notifications to affected communities and emergency services</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">Our Team</h2>
+            <p>We are a dedicated team of developers, data scientists, and disaster response experts committed to making a difference.</p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+            <ul className="list-disc list-inside">
+              <li>Email: info@beacon-alerts.com</li>
+              <li>Emergency Hotline: 1-800-BEACON-HELP</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default About;

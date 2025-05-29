@@ -1,21 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar';
-import Home from './pages/home';
-import About from './pages/about';
-import Alerts from './pages/alert';
-import Settings from './pages/setting';
+import Sidebar from './components/Sidebar';
+import Map from './pages/Map';
+import Analytics from './pages/Analytics';
+import Settings from './pages/Settings';
+import About from './pages/About';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/alerts" element={<Alerts />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="*" element={<div className="text-center p-6">404 - Page Not Found</div>} />
-      </Routes>
+      <div className="flex">
+        <Sidebar />
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Map />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }
